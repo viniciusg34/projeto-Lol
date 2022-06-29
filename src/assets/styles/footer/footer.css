@@ -1,0 +1,16 @@
+footer{
+  background-color: black;
+}
+
+.footerText{
+  font-size: 24px;
+  font-weight: 800;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: linear-gradient(to bottom, #5b4b31,#c0ae64,#583f26);
+  font-family: 'Cinzel', 'Roboto';
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}

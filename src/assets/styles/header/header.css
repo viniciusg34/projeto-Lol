@@ -1,0 +1,32 @@
+header{
+    background-color: #1a1919;
+    display: flex;
+    justify-content: center;
+    height: 105px;
+}
+
+.logo{
+    width: 150px;
+    height: 105px;
+}
+
+ul{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0%;
+    list-style-type: none;
+}
+
+.links{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'cinzel', 'Roboto';
+    font-weight: 700;
+}
+
+.links:hover{
+    color: red;
+}
