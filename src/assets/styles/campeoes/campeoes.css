@@ -4,11 +4,16 @@
     align-items: center;
     justify-content: center;
     background-color: #132225;
+    min-height: 83.5vh;
 }
 
 .containerCards{
-    background-color: red;
-    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .card{
@@ -29,8 +34,7 @@
 }
 
 .championSkills, .championPrice, .championName, .championClass{
-    max-width: 230px;
-    min-width: 210px;
+    width: 230px;
 }
 .championSkills, .championPrice, .championName, .championClass{
     font-size: 18px;
@@ -40,4 +44,12 @@
     background-clip: text;
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 705px){
+
+    .containerCards{
+        justify-content: center;
+    }
+
 }

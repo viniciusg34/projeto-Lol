@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from '../../assets/images/riot-logo.png'
 import '../../assets/styles/header/header.css'
 
 
@@ -7,29 +6,22 @@ const Header = () =>{
 
     return(
         <header>
-            <div>
-                <img className='logo' src={logo} alt="riot games" />
-            </div>
             <ul>
+                <div className="logo">
+                    <label className="titleLogo">RIOT</label>
+                    <p className="Subtitle">Games</p>
+                </div>
                 <li>
-                    <button className="botao transparent">
-                        <Link className="links" to='/'>O jogo</Link>
-                    </button>
+                    <Link className="links botao transparent" to='/'>O jogo</Link>
                 </li>
                 <li>
-                   <button className="botao transparent">
-                        <Link className="links" to='/campeoes'>campeões</Link>
-                    </button>
+                    <a className="links" href="https://www.leagueoflegends.com/pt-br/news/game-updates/">Notícias</a>
                 </li>
                 <li>
-                    <button className="botao transparent">
-                        <a className="links" href="https://www.leagueoflegends.com/pt-br/news/game-updates/">Notícias</a>
-                    </button>
+                    <Link className="links botao transparent" to='/campeoes'>campeões</Link>
                 </li>
                 <li>
-                    <button className="botao transparent">
-                        <a className="links" href="https://www.leagueoflegends.com/pt-br/news/tags/patch-notes/">atualizações</a>
-                    </button>
+                    <a className="links" href="https://www.leagueoflegends.com/pt-br/news/tags/patch-notes/">atualizações</a>
                 </li>           
             </ul>
         </header>

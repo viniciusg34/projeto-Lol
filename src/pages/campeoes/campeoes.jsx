@@ -1,41 +1,41 @@
+import '../../assets/styles/campeoes/campeoes.css'
 import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
+import { apiLol } from '../../services/api'
 import React, { useEffect, useState} from 'react';
 import Card from '../../components/cardChampion/cardChampion';
-import '../../assets/styles/campeoes/campeoes.css'
-import { apiLol } from '../../services/api'
 
 export const Campeoes = () =>{
 
-    const [classe, setClasse] = useState([])
-    const listarClasse = () =>{
-        apiLol.get(`/classe`)
+    const [champion, setChampion] = useState([])
+    const champions = () =>{
+        apiLol.get(`/champions`)
         .then(resultado =>{
             console.log(resultado.data)
-            setClasse(resultado.data)
+            setChampion(resultado.data)
         })
     }
     
     useEffect(()=>{    
-        listarClasse()
+        champions()
     }, [])
     
-    const [champion, setChampion] = useState([])
-    useEffect(() => {
+    // const [champion, setChampion] = useState([])
+    // useEffect(() => {
 
-        let quantidadeClasses = classe.length;
+    //     let quantidadeClasses = classe.length;
 
-        for (let index = 0; index < quantidadeClasses; index++) {
-            apiLol.get(`/classe/${index + 1}/hero`)
-                .then(resultado => {
-                    setChampion(champion => champion.concat(resultado.data))
-                });
-        }
-    },  [classe.length]);
+    //     for (let index = 0; index < quantidadeClasses; index++) {
+    //         apiLol.get(`/classe/${index + 1}/hero`)
+    //             .then(resultado => {
+    //                 setChampion(champion => champion.concat(resultado.data))
+    //             });
+    //     }
+    // },  [classe.length]);
 
-    useEffect(() => {
-        console.log(champion)
-    },  [champion]);
+    // useEffect(() => {
+    //     console.log(champion)
+    // },  [champion]);
 
 
 
@@ -43,11 +43,11 @@ export const Campeoes = () =>{
         <>
             <Header/>
             <div className='campeoesMain'>
-                <div classsName='containerCards'>
+                <div className='containerCards'>
                     {
-                        champion.map( () =>{
+                        champion.map( (item) =>{
                             return(
-                                <Card/>
+                                <Card obj={item} key={item.id}/>
                             )
                         })
                     }
