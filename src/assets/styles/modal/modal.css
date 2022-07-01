@@ -1,0 +1,51 @@
+.modal{ 
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'cinzel';
+    font-weight: 800;
+    background-color: #20454b;
+}
+
+.labelModal{
+    font-size: 18px;
+    font-weight: 800;
+    background-image: linear-gradient(to bottom, #db982d,#bdbd52,#493616);
+    font-family: 'Cinzel', 'Roboto';
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.inputchampion{
+    width:400px;
+    height: 25px;
+    border-radius: 5px;
+    border: #0a1618 solid 3px;
+    font-size: 16px;
+    font-weight: 800;
+    background-image: linear-gradient(to bottom, #db982d,#bdbd52,#db982d);
+    background-color: #3d8b8b ;
+    font-family: 'Cinzel', 'Roboto';
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.inputchampion::placeholder{
+    font-size: 16px;
+    font-weight: 800;
+    background-image: linear-gradient(to bottom, #db982d,#bdbd52,#db982d);
+    font-family: 'Cinzel', 'Roboto';
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+.containerInput{
+    display: flex;
+    flex-direction: column;
+}

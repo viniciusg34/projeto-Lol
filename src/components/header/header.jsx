@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from '../../assets/images/riot-logo.png'
 import '../../assets/styles/header/header.css'
 
 
@@ -7,9 +8,12 @@ const Header = () =>{
     return(
         <header>
             <ul>
-                <div className="logo">
-                    <label className="titleLogo">RIOT</label>
-                    <p className="Subtitle">Games</p>
+                <div className="containerLogo">
+                    <img src={logo} alt="Riot logo" className="logo" />
+                    <div>
+                        <label className="titleLogo">RIOT</label>
+                        <p className="Subtitle">Games</p>
+                    </div>
                 </div>
                 <li>
                     <Link className="links botao transparent" to='/'>O jogo</Link>

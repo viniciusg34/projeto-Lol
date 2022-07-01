@@ -1,9 +1,12 @@
 import '../../assets/styles/campeoes/campeoes.css'
 import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
-import { apiLol } from '../../services/api'
 import React, { useEffect, useState} from 'react';
 import Card from '../../components/cardChampion/cardChampion';
+import { apiLol } from '../../services/api'
+import { Modal } from '../../components/modal/modal';
+
+
 
 export const Campeoes = () =>{
 
@@ -37,17 +40,27 @@ export const Campeoes = () =>{
     //     console.log(champion)
     // },  [champion]);
 
-
+    const [modalChampion, setModalchampion] = useState('hide')
+    const abrirFecharModal = (estadoAtual) =>{
+        
+        if(estadoAtual === 'hide'){
+            setModalchampion('Show')
+        }
+        else{
+            setModalchampion('hide')
+        }
+    }
 
     return(
         <>
             <Header/>
             <div className='campeoesMain'>
+                <Modal/>
                 <div className='containerCards'>
                     {
                         champion.map( (item) =>{
                             return(
-                                <Card obj={item} key={item.id}/>
+                                <Card obj={item} key={item.id} onClick={() => abrirFecharModal(modalChampion)} />
                             )
                         })
                     }

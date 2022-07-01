@@ -1,19 +1,28 @@
 header{
-    background-color: #1a1919;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     height: 105px;
 }
 
+.containerLogo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 150px;
+    height: 105px;
+}
+
 .titleLogo, .Subtitle{
     color: white;
-    font-family: 'cinzel';
-    font-weight: bolder;
+    font-weight: 700;
+    font-family: "cinzel", "Roboto";
 }
 
 .titleLogo{
-    font-size: 28px;
-    margin-bottom: 0px;
+    font-size: 24px;
 }
 
 .Subtitle{
@@ -39,7 +48,7 @@ ul{
     font-weight: 700;
 }
 
-.links:hover, .Subtitle:hover, .titleLogo:hover{
+.links:hover{
     color: red;
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
-// import campeao from '../../assets/images/default.png'
-import '../../assets/styles/campeoes/campeoes.css'
+import '../../assets/styles/cards/cards.css'
 
 
 const Card = (props) =>{
