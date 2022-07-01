@@ -57,6 +57,7 @@ export const Campeoes = () =>{
             <div className='campeoesMain'>
                 <Modal/>
                 <div className='containerCards'>
+                <button className='createCard'>adicionar campeão</button>
                     {
                         champion.map( (item) =>{
                             return(
