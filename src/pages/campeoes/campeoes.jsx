@@ -55,13 +55,14 @@ export const Campeoes = () =>{
         <>
             <Header/>
             <div className='campeoesMain'>
-                <Modal/>
+                <Modal modal={modalChampion} fechar={abrirFecharModal} onClick={() => abrirFecharModal(modalChampion)} />
                 <div className='containerCards'>
-                <button className='createCard'>adicionar campeão</button>
+                    <div className='buttonBackground'></div>
+                    <button className='createCard' onClick={abrirFecharModal}>adicionar campeão</button>
                     {
                         champion.map( (item) =>{
                             return(
-                                <Card obj={item} key={item.id} onClick={() => abrirFecharModal(modalChampion)} />
+                                <Card obj={item} key={item.id} />
                             )
                         })
                     }

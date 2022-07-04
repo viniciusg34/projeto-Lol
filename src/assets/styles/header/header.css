@@ -8,11 +8,13 @@ header{
 .containerLogo{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 120px;
 }
 
 .logo{
-    width: 150px;
-    height: 105px;
+    width: 50px;
+    height: 49px;
 }
 
 .titleLogo, .Subtitle{
