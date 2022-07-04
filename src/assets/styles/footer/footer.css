@@ -14,3 +14,26 @@ footer{
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 450px){
+  footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .footerText{
+    margin: 0px;
+  }
+}
+
+@media (max-width: 260px){
+  footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .footerText{
+    text-align: center;
+    width: 108px;
+  }
+}

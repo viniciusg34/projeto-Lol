@@ -21,6 +21,9 @@
 
 .centralizarIframe{
     width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerIframe {
@@ -28,11 +31,16 @@
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    margin-top: 80px;
     border-radius: 14px;
-  }
-  
-  /* Then style the iframe to fit in the container div with full height and width */
-  .responsive-iframe {
+    max-width: 1200px;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+    border-radius: 14px;
+    max-width: 1200px;
+    max-height: 675px;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,7 +53,7 @@
 
 .containerParagraph{
     width: 90%;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .homeParagraph{
